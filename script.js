@@ -111,8 +111,8 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
 
     function swapGengar(state, showMs = 800, backToIdleMs = 1200) {
       const $img = $("#gengar");
-      $img.stop(true, true).fadeOut(150, function () { // One of the unique methods used from jQuery was .fadeOut() and here it was used to stop any queued animations and fade out the current image.
-        $img.attr("src", gengarImgs[state]).fadeIn(showMs); // The other unique method was .fadeIn() and here we used it to swap the image source safely once the other image was fully hidden.
+      $img.stop(true, true).fadeOut(150, function () { // One of the unique methods used from jQuery was .fadeOut() and here it was used to stop any queued animations and fade out the current image. (Description: Hide the matched elements by fading them to transparent.)
+        $img.attr("src", gengarImgs[state]).fadeIn(showMs); // The other unique method was .fadeIn() and here we used it to swap the image source safely once the other image was fully hidden through fading in the other image. (Description: Display the matched elements by fading them to opaque.)
       });
 
       // Return to idle after a moment
